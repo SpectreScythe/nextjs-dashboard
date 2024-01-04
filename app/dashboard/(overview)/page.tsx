@@ -10,9 +10,9 @@ import DashboardSkeleton from "@/app/ui/skeletons";
 
 export default async function Page() {
     return (
-        <main className="bg-slate-900">
+        <main className="bg-stone-900">
             <Suspense fallback={<DashboardSkeleton/>}>
-                <h1 className={`${lusitana.className} text-slate-500 mb-4 text-xl md:text-2xl`}>
+                <h1 className={`text-stone-100 b-4 text-xl md:text-2xl py-2`}>
                     Dashboard
                 </h1>
                 <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">

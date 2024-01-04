@@ -22,16 +22,16 @@ export default async function RevenueChart(){
   }
 
   return (
-    <div className="w-full md:col-span-4 bg-slate-900">
-      <h2 className={`${lusitana.className} text-slate-500 mb-4 text-xl md:text-2xl  px-4`}>
+    <div className="w-full md:col-span-4 bg-stone-900">
+      <h2 className={`text-stone-100 mb-4 text-xl md:text-2xl  px-4`}>
         Recent Revenue
       </h2>
       {/* NOTE: comment in this code when you get to this point in the course */}
 
-      { <div className="rounded-xl bg-slate-900 p-4">
-        <div className="sm:grid-cols-13 mt-0 grid grid-cols-12 items-end gap-2 rounded-md p-4 md:gap-4 bg-slate-600 ">
+      { <div className="rounded-xl bg-stone-900 p-4">
+        <div className="sm:grid-cols-13 mt-0 grid grid-cols-12 items-end gap-2 rounded-md p-4 md:gap-4 bg-stone-800 ">
           <div
-            className="mb-6 hidden flex-col justify-between text-sm text-slate-900 sm:flex bg-slate-600 "
+            className="mb-6 hidden flex-col justify-between text-sm text-stone-100 sm:flex bg-stone-800 "
             style={{ height: `${chartHeight}px` }}
           >
             {yAxisLabels.map((label) => (
@@ -40,22 +40,22 @@ export default async function RevenueChart(){
           </div>
 
           {revenue.map((month) => (
-            <div key={month.month} className="flex flex-col items-center gap-2 bg-slate-600 ">
+            <div key={month.month} className="flex flex-col items-center gap-2 text-stone-700 ">
               <div
-                className="w-full rounded-md bg-slate-900"
+                className="w-full rounded-md bg-stone-700"
                 style={{
                   height: `${(chartHeight / topLabel) * month.revenue}px`,
                 }}
               ></div>
-              <p className="-rotate-90 text-sm text-slate-900 sm:rotate-0">
+              <p className="-rotate-90 text-sm bg-stone-800 text-stone-100 sm:rotate-0">
                 {month.month}
               </p>
             </div>
           ))}
         </div>
         <div className="flex items-center pb-2 pt-6">
-          <CalendarIcon className="h-5 w-5 text-slate-500" />
-          <h3 className="ml-2 text-sm text-slate-500 ">Last 12 months</h3>
+          <CalendarIcon className="h-5 w-5 text-stone-100" />
+          <h3 className="ml-2 text-sm text-stone-100 ">Last 12 months</h3>
         </div>
       </div> }
     </div>
