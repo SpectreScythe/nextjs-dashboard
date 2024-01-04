@@ -107,7 +107,7 @@ export async function updateInvoice(id: string, prevState: State, formData: Form
     const {customerId,amount,status} = validatedFields.data;
 
     const amountInCents = amount*100;
-    const date = new Date().toISOString().toString().split("T")[0];
+    // const date = new Date().toISOString().toString().split("T")[0];
 
     try{
         await sql`
