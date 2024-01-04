@@ -2,11 +2,11 @@ import NextAuth from 'next-auth';
 import { authConfig } from './auth.config';
 import Credentials from "@auth/core/providers/credentials";
 import {z} from "zod"
-import {sql} from "@vercel/postgres";
+import {QueryResultRow, sql} from "@vercel/postgres";
 import {User} from "@/app/lib/definitions"
 import bcrypt from "bcrypt";
 
-async function getUser(email: string){
+async function getUser(email: string): Promise<QueryResultRow> {
     try{
         const user = await sql`SELECT * FROM users WHERE email=${email}`
         return user.rows[0];
